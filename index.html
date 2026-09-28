@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#080619" />
-    <meta name="description" content="Company Awards 2026 — 3位から1位へ、野球の表彰式演出" />
-    <title>Company Awards 2026 | Opening</title>
+    <meta name="description" content="Diamond Awards 2026 — 3位から優勝へ、球場の表彰式演出" />
+    <title>Diamond Awards 2026 | Opening</title>
     <script type="module" crossorigin src="./script.js"></script>
     <link rel="stylesheet" crossorigin href="./style.css">
   </head>
@@ -15,7 +15,7 @@
         <div class="scene-wrap" id="scene-wrap">
           <div class="sky-glow sky-glow--left"></div>
           <div class="sky-glow sky-glow--right"></div>
-          <canvas id="stage" aria-label="銅、銀、金へ変化する立体文字と動くサーチライトの表彰式ステージ"></canvas>
+          <canvas id="stage" aria-label="球場の中で銅・銀・金の盾が現れ、優勝旗と紙吹雪が広がる表彰式ステージ"></canvas>
           <div class="grain"></div>
           <div class="vignette"></div>
           <div class="field-diamond" aria-hidden="true"></div>
@@ -23,62 +23,61 @@
           <div class="stadium-lights stadium-lights--right" aria-hidden="true"></div>
           <div class="baseball-seam baseball-seam--left" aria-hidden="true"></div>
           <div class="baseball-seam baseball-seam--right" aria-hidden="true"></div>
+          <div class="stadium-caption" aria-hidden="true"><span>FINAL GAME</span><i></i><span>2026</span></div>
 
           <header class="masthead">
-            <div class="brand"><span class="brand-mark">✦</span><span data-bind="brand">COMPANY AWARDS</span><span class="brand-year" data-bind="year">2026</span></div>
-            <div class="edition"><span class="edition-line"></span> THE AWARDS LEAGUE · FINAL INNING <span class="edition-line"></span></div>
+            <div class="brand"><span class="brand-mark">◆</span><span data-bind="brand">DIAMOND AWARDS</span><span class="brand-year" data-bind="year">2026</span></div>
+            <div class="edition"><span class="edition-line"></span> THE ROAD TO THE CHAMPIONSHIP <span class="edition-line"></span></div>
             <button id="fullscreen" class="icon-button" type="button" aria-label="全画面表示" title="全画面表示">⛶</button>
           </header>
 
           <div class="intro-copy" id="intro-copy">
-            <span class="eyebrow">PLAY BALL · AWARDS NIGHT</span>
-            <h1>THE SPOTLIGHT<br />IS YOURS.</h1>
+            <span class="eyebrow">THE ROAD TO THE CHAMPIONSHIP</span>
+            <h1>栄光の舞台へ。<br /><small>PLAY BALL.</small></h1>
             <div class="intro-rule"></div>
-            <p>その輝きに、喝采を。</p>
+            <p>最後の一球まで、戦い抜いたチームへ。</p>
           </div>
 
           <div class="rank-announcement rank-announcement--third" id="rank-third" aria-live="polite">
-            <span class="rank-overline">THE AWARDS LEAGUE <span>◆</span> BRONZE HONOR</span>
+            <span class="rank-overline">THE DIAMOND AWARDS <span>◆</span> BRONZE HONOR</span>
             <div class="rank-heading"><span></span><b>3位</b><span></span></div>
             <h2 data-bind="thirdTeam">〇〇チーム</h2>
             <p>堂々の第3位、おめでとうございます。</p>
           </div>
           <div class="rank-announcement rank-announcement--second" id="rank-second" aria-live="polite">
-            <span class="rank-overline">THE AWARDS LEAGUE <span>◆</span> SILVER HONOR</span>
+            <span class="rank-overline">THE DIAMOND AWARDS <span>◆</span> SILVER HONOR</span>
             <div class="rank-heading"><span></span><b>2位</b><span></span></div>
             <h2 data-bind="secondTeam">〇〇チーム</h2>
             <p>頂点に迫る、見事な第2位。</p>
           </div>
           <div class="rank-announcement rank-announcement--first" id="rank-first" aria-live="polite">
-            <span class="rank-overline">THE AWARDS LEAGUE <span>◆</span> CHAMPIONS</span>
-            <div class="rank-heading"><span></span><b>1位</b><span></span></div>
+            <span class="rank-overline">THE DIAMOND AWARDS <span>◆</span> CHAMPIONS</span>
+            <div class="rank-heading"><span></span><b>優勝・1位</b><span></span></div>
             <h2 data-bind="firstTeam">〇〇チーム</h2>
             <p>栄光のチャンピオンに、最大の拍手を。</p>
             <span class="rank-stars">✦ &nbsp; ✦ &nbsp; ✦</span>
           </div>
 
-          <div class="side-label">DIAMOND OF EXCELLENCE <span>·</span> EST. 2026</div>
+          <div class="side-label">ONE TEAM · ONE DREAM <span>·</span> 2026</div>
 
           <footer class="controls">
             <div class="scroll-prompt"><span class="scroll-icon"><span></span></span><span>SCROLL TO REVEAL</span></div>
-            <div class="transport"><span class="scene-count"><b id="scene-index">OPENING</b><i></i>3位 → 1位</span><div class="progress-track"><span id="progress-bar"></span></div><button id="prev" class="text-button" type="button" aria-label="前のシーン">↑</button><button id="next" class="text-button next-button" type="button" aria-label="次のシーン">次へ <span>↓</span></button></div>
+            <div class="transport"><span class="scene-count"><b id="scene-index">OPENING</b><i></i>3位 → 優勝</span><div class="progress-track"><span id="progress-bar"></span></div><button id="prev" class="text-button" type="button" aria-label="前のシーン">↑</button><button id="next" class="text-button next-button" type="button" aria-label="次のシーン">次へ <span>↓</span></button></div>
           </footer>
         </div>
       </div>
 
       <section class="outro" aria-label="操作ガイド">
-        <div class="outro-inner"><span class="eyebrow">GAME, SET, CELEBRATE</span><h2>CHAMPIONS<br />ARE MADE HERE.</h2><p>3位から1位まで、もう一度発表を再生できます。</p><button id="replay" type="button">最初から再生 <span>↗</span></button></div>
+        <div class="outro-inner"><span class="eyebrow">THE CHAMPIONSHIP MOMENT</span><h2>栄光を、<br />もう一度。</h2><p>3位から優勝まで、もう一度発表を再生できます。</p><button id="replay" type="button">最初から再生 <span>↗</span></button></div>
       </section>
     </main>
     <!-- チーム名などはここで変更できます。英数字の3D文字は内蔵フォントを使用します。 -->
     <script>
       window.AWARDS_CONFIG = {
-        anniversary: '20',
-        ordinal: 'th',
-        company: 'COMPANY',
-        awards: 'AWARDS',
+        titleTop: 'DIAMOND',
+        titleBottom: 'AWARDS',
         year: '2026',
-        brand: 'COMPANY AWARDS',
+        brand: 'DIAMOND AWARDS',
         thirdTeam: '〇〇チーム',
         secondTeam: '〇〇チーム',
         firstTeam: '〇〇チーム',
