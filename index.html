@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#080619" />
     <meta name="description" content="Diamond Awards 2026 — 3位から優勝へ、球場の表彰式演出" />
     <title>Diamond Awards 2026 | Opening</title>
-    <script type="module" crossorigin src="./script.js"></script>
-    <link rel="stylesheet" crossorigin href="./style.css">
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <main id="app">
@@ -27,50 +27,48 @@
 
           <header class="masthead">
             <div class="brand"><span class="brand-mark">◆</span><span data-bind="brand">DIAMOND AWARDS</span><span class="brand-year" data-bind="year">2026</span></div>
-            <div class="edition"><span class="edition-line"></span> THE ROAD TO THE CHAMPIONSHIP <span class="edition-line"></span></div>
-            <button id="fullscreen" class="icon-button" type="button" aria-label="全画面表示" title="全画面表示">⛶</button>
+            <div class="edition"><span class="edition-line"></span> NEW BUSINESS CHAMPIONSHIP <span class="edition-line"></span></div>
+            <button id="settings" class="text-button" type="button">大会設定</button><button id="sound" class="text-button" type="button" aria-pressed="false">音 OFF</button><button id="fullscreen" class="icon-button" type="button" aria-label="全画面表示" title="全画面表示">⛶</button>
           </header>
 
           <div class="intro-copy" id="intro-copy">
-            <span class="eyebrow">THE ROAD TO THE CHAMPIONSHIP</span>
-            <h1>栄光の舞台へ。<br /><small>PLAY BALL.</small></h1>
+            <span class="eyebrow">NEW BUSINESS CHAMPIONSHIP</span>
+            <h1>その挑戦が、<br />未来を変える。<small>THE FINAL INNING.</small></h1>
             <div class="intro-rule"></div>
-            <p>最後の一球まで、戦い抜いたチームへ。</p>
+            <p>新規事業プレゼンテーション ── 結果発表</p>
           </div>
 
           <div class="rank-announcement rank-announcement--third" id="rank-third" aria-live="polite">
             <span class="rank-overline">THE DIAMOND AWARDS <span>◆</span> BRONZE HONOR</span>
             <div class="rank-heading"><span></span><b>3位</b><span></span></div>
             <h2 data-bind="thirdTeam">〇〇チーム</h2>
-            <p>堂々の第3位、おめでとうございます。</p>
+            <p class="rank-project"><span class="project-prefix">タイトル：</span><span data-bind="thirdTitle">〇〇〇〇〇〇事業</span></p>
           </div>
           <div class="rank-announcement rank-announcement--second" id="rank-second" aria-live="polite">
             <span class="rank-overline">THE DIAMOND AWARDS <span>◆</span> SILVER HONOR</span>
             <div class="rank-heading"><span></span><b>2位</b><span></span></div>
             <h2 data-bind="secondTeam">〇〇チーム</h2>
-            <p>頂点に迫る、見事な第2位。</p>
+            <p class="rank-project"><span class="project-prefix">タイトル：</span><span data-bind="secondTitle">〇〇〇〇〇〇事業</span></p>
           </div>
           <div class="rank-announcement rank-announcement--first" id="rank-first" aria-live="polite">
             <span class="rank-overline">THE DIAMOND AWARDS <span>◆</span> CHAMPIONS</span>
             <div class="rank-heading"><span></span><b>優勝・1位</b><span></span></div>
             <h2 data-bind="firstTeam">〇〇チーム</h2>
-            <p>栄光のチャンピオンに、最大の拍手を。</p>
-            <span class="rank-stars">✦ &nbsp; ✦ &nbsp; ✦</span>
+            <p class="rank-project"><span class="project-prefix">タイトル：</span><span data-bind="firstTitle">〇〇〇〇〇〇事業</span></p>
           </div>
 
-          <div class="side-label">ONE TEAM · ONE DREAM <span>·</span> 2026</div>
+          <div id="suspense" class="suspense" aria-live="polite"><span>THE NEXT HONOR</span><strong id="pending-rank"></strong><p>その挑戦に、栄光を。</p><div class="pitch-line"></div></div><div class="flash" id="flash"></div><div class="ceremony-label">新規事業の甲子園 <span>／</span> AWARD CEREMONY</div><div class="side-label">ONE TEAM · ONE DREAM <span>·</span> 2026</div>
 
           <footer class="controls">
-            <div class="scroll-prompt"><span class="scroll-icon"><span></span></span><span>SCROLL TO REVEAL</span></div>
-            <div class="transport"><span class="scene-count"><b id="scene-index">OPENING</b><i></i>3位 → 優勝</span><div class="progress-track"><span id="progress-bar"></span></div><button id="prev" class="text-button" type="button" aria-label="前のシーン">↑</button><button id="next" class="text-button next-button" type="button" aria-label="次のシーン">次へ <span>↓</span></button></div>
+            <div class="scroll-prompt"><span class="live-dot"></span><span id="cue">SPACE / → で進行</span></div>
+            <div class="transport"><span class="scene-count"><b id="scene-index">OPENING</b><i></i>3位 → 優勝</span><div class="progress-track"><span id="progress-bar"></span></div><button id="prev" class="text-button" type="button" aria-label="前のシーン">戻る</button><button id="next" class="text-button next-button" type="button" aria-label="次のシーン">表彰を始める <span>→</span></button></div>
           </footer>
         </div>
       </div>
 
-      <section class="outro" aria-label="操作ガイド">
-        <div class="outro-inner"><span class="eyebrow">THE CHAMPIONSHIP MOMENT</span><h2>栄光を、<br />もう一度。</h2><p>3位から優勝まで、もう一度発表を再生できます。</p><button id="replay" type="button">最初から再生 <span>↗</span></button></div>
-      </section>
     </main>
+    <dialog id="editor"><form id="config-form"><div class="dialog-title"><span>TOURNAMENT SETTINGS</span><h2>大会・受賞チームの設定</h2></div><p>本番の投影前に入力してください。保存すると冒頭へ戻ります。</p><label>大会名<input name="brand" maxlength="45" required></label><label>開催年<input name="year" pattern="[0-9]{4}" title="西暦4桁で入力してください" maxlength="4" required></label><div id="team-fields"></div><p class="note">入力はこのブラウザに保存されます。音は初期状態でOFFです。</p><div class="dialog-actions"><button type="button" id="close-editor">閉じる</button><button type="submit">保存して準備完了</button></div></form></dialog>
+    <div id="fallback" hidden>3D表示を開始できませんでした。Chrome / Edgeのハードウェアアクセラレーションを有効にして再読み込みしてください。</div>
     <!-- チーム名などはここで変更できます。英数字の3D文字は内蔵フォントを使用します。 -->
     <script>
       window.AWARDS_CONFIG = {
@@ -79,10 +77,16 @@
         year: '2026',
         brand: 'DIAMOND AWARDS',
         thirdTeam: '〇〇チーム',
+        thirdTitle: '〇〇〇〇〇〇事業',
         secondTeam: '〇〇チーム',
+        secondTitle: '〇〇〇〇〇〇事業',
         firstTeam: '〇〇チーム',
+        firstTitle: '〇〇〇〇〇〇事業',
         skyOverscan: 1.3, // 空の余白。1.5 にするとさらに広くなります。
       };
     </script>
-  </body>
+  <script>
+try { Object.assign(window.AWARDS_CONFIG, JSON.parse(localStorage.getItem('diamond-ceremony-config') || '{}')); } catch (_) {}
+window.addEventListener('error', function(){ if(!window.ceremonyReady) document.getElementById('fallback').hidden=false; });
+</script></body>
 </html>
