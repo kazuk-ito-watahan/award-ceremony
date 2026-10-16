@@ -15,7 +15,7 @@
         <div class="scene-wrap" id="scene-wrap">
           <div class="sky-glow sky-glow--left"></div>
           <div class="sky-glow sky-glow--right"></div>
-          <canvas id="stage" aria-label="球場の中で銅・銀・金の盾が現れ、優勝旗と紙吹雪が広がる表彰式ステージ"></canvas>
+          <canvas id="stage" aria-label="夜のグラウンドに白球、銅・銀・金の立体数字、深紅の優勝旗が現れる表彰式"></canvas>
           <div class="grain"></div>
           <div class="vignette"></div>
           <div class="field-diamond" aria-hidden="true"></div>
@@ -69,7 +69,7 @@
     </main>
     <dialog id="editor"><form id="config-form"><div class="dialog-title"><span>TOURNAMENT SETTINGS</span><h2>大会・受賞チームの設定</h2></div><p>本番の投影前に入力してください。保存すると冒頭へ戻ります。</p><label>大会名<input name="brand" maxlength="45" required></label><label>開催年<input name="year" pattern="[0-9]{4}" title="西暦4桁で入力してください" maxlength="4" required></label><div id="team-fields"></div><p class="note">入力はこのブラウザに保存されます。音は初期状態でOFFです。</p><div class="dialog-actions"><button type="button" id="close-editor">閉じる</button><button type="submit">保存して準備完了</button></div></form></dialog>
     <div id="fallback" hidden>3D表示を開始できませんでした。Chrome / Edgeのハードウェアアクセラレーションを有効にして再読み込みしてください。</div>
-    <!-- チーム名などはここで変更できます。英数字の3D文字は内蔵フォントを使用します。 -->
+    <!-- チーム名などの初期値 -->
     <script>
       window.AWARDS_CONFIG = {
         titleTop: 'DIAMOND',
